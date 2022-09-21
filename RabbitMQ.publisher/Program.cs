@@ -6,6 +6,13 @@ using System.Threading;
 
 namespace RabbitMQ.publisher
 {
+    public enum LogNames
+    {
+        Critical = 1,
+        Error = 2,
+        Warning = 3,
+        Info = 4
+    }
     class Program
     {
         static void Main(string[] args)
@@ -16,19 +23,29 @@ namespace RabbitMQ.publisher
 
             //channel.QueueDeclare("hello-queue", true, false, false);
 
-            channel.ExchangeDeclare("logs-fanout", durable: true, type: ExchangeType.Fanout);
+            channel.ExchangeDeclare("logs-direct", durable: true, type: ExchangeType.Direct);
+
+            Enum.GetNames(typeof(LogNames)).ToList().ForEach(x =>
+            {
+                var routeKey = $"route-{x}";
+                var queueName = $"direct-queue-{x}";
+                channel.QueueDeclare(queueName, true, false, false);
+                channel.QueueBind(queueName, "logs-direct", routeKey, null);
+            });
 
             Enumerable.Range(1, 50).ToList().ForEach(x =>
             {
-                string message = $"Log {x}";
+                LogNames log = (LogNames)new Random().Next(1, 4);
+                string message = $"log-type: {log}";
                 var messageBody = Encoding.UTF8.GetBytes(message);
                 //channel.BasicPublish(string.Empty, "hello-queue", null, messageBody);
                 //Queue ya atmak için kullanılır.
-                channel.BasicPublish(exchange: "logs-fanout",//mesajın alınıp bir veya birden fazla queue ya konmasını sağlıyor.
-                    routingKey: "", //Hangi queue ya atanacak.
+                var routeKey = $"route-{log}";
+                channel.BasicPublish(exchange: "logs-direct",//mesajın alınıp bir veya birden fazla queue ya konmasını sağlıyor.
+                    routingKey: routeKey, //Hangi queue ya atanacak.
                     body: messageBody//Mesajun içeriği
                     );
-                Thread.Sleep(1500);
+                
                 Console.WriteLine($"Mesaj Gönderilmiştir : {message}");
 
             });
