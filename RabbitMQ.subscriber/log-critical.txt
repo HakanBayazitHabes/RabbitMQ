@@ -1,0 +1,9 @@
+log-type: Info-Error-Info
+log-type: Error-Error-Warning
+log-type: Info-Error-Info
+log-type: Info-Error-Info
+log-type: Critical-Error-Warning
+log-type: Warning-Error-Warning
+log-type: Critical-Error-Info
+log-type: Info-Error-Warning
+log-type: Critical-Error-Error

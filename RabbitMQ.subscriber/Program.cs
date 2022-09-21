@@ -23,9 +23,11 @@ namespace RabbitMQ.subscriber
             channel.BasicQos(0, 1, false);
             var consumer = new EventingBasicConsumer(channel);
 
-            var queueName = "direct-queue-Critical";
+            var queueName = channel.QueueDeclare().QueueName;
+            var routekey = "*.Error.*";
+            channel.QueueBind(queueName, "logs-topic", routekey);
             //channel.BasicConsume("hello-queue", true, consumer);
-            
+
 
             Console.WriteLine("Logları dinleniyor...");
             consumer.Received += (object sender, BasicDeliverEventArgs e) =>
