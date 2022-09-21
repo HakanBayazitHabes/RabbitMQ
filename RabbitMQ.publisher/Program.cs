@@ -1,5 +1,6 @@
 ﻿using RabbitMQ.Client;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading;
@@ -23,29 +24,19 @@ namespace RabbitMQ.publisher
 
             //channel.QueueDeclare("hello-queue", true, false, false);
 
-            channel.ExchangeDeclare("logs-topic", durable: true, type: ExchangeType.Topic);
+            channel.ExchangeDeclare("header-exchange", durable: true, type: ExchangeType.Headers);
 
-            Random rnd = new Random();
-            Enumerable.Range(1, 50).ToList().ForEach(x =>
-            {
-                //channel.BasicPublish(string.Empty, "hello-queue", null, messageBody);
-                LogNames log1 = (LogNames)rnd.Next(1, 5);
-                LogNames log2 = (LogNames)rnd.Next(1, 5);
-                LogNames log3 = (LogNames)rnd.Next(1, 5);
-                var routeKey = $"{log1}.{log2}.{log3}";
-                string message = $"log-type: {log1}-{log2}-{log3}";
-                var messageBody = Encoding.UTF8.GetBytes(message);
+            Dictionary<string, object> headers = new Dictionary<string, object>();
 
-                channel.BasicPublish(exchange: "logs-topic",//mesajın alınıp bir veya birden fazla queue ya konmasını sağlıyor.
-                    routingKey: routeKey, //Hangi queue ya atanacak.
-                    body: messageBody//Mesajun içeriği
-                    );
+            headers.Add("format", "pdf");
+            headers.Add("shape", "a4");
 
-                Console.WriteLine($"Mesaj Gönderilmiştir : {message}");
+            var porperties = channel.CreateBasicProperties();
+            porperties.Headers = headers;
 
-            });
+            channel.BasicPublish("header-exchange", string.Empty, porperties, Encoding.UTF8.GetBytes("header Mesajım"));
 
-
+            Console.WriteLine("Mesaj gönderilmiştir");
 
             Console.ReadLine();
         }

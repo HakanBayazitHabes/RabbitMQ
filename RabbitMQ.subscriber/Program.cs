@@ -1,6 +1,7 @@
 ﻿using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
 using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Text;
 using System.Threading;
@@ -15,7 +16,7 @@ namespace RabbitMQ.subscriber
             using IConnection connection = factory.CreateConnection();
             using IModel channel = connection.CreateModel();
             //channel.QueueDeclare("hello-queue", true, false, false);
-
+            channel.ExchangeDeclare("header-exchange", durable: true, type: ExchangeType.Headers);
 
             //0=> herhangi bir boyuttaki değeri döndür
             //1=> Mesajlar kaçar adet gelsin
@@ -24,8 +25,13 @@ namespace RabbitMQ.subscriber
             var consumer = new EventingBasicConsumer(channel);
 
             var queueName = channel.QueueDeclare().QueueName;
-            var routekey = "*.Error.*";
-            channel.QueueBind(queueName, "logs-topic", routekey);
+            Dictionary<string, object> headers = new Dictionary<string, object>();
+
+            headers.Add("format", "pdf");
+            headers.Add("shape", "a4");
+            headers.Add("x-match", "all");
+
+            channel.QueueBind(queueName, "header-exchange", string.Empty,headers);
             //channel.BasicConsume("hello-queue", true, consumer);
 
 
