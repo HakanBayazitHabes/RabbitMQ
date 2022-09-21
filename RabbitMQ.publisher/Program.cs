@@ -2,6 +2,7 @@
 using System;
 using System.Linq;
 using System.Text;
+using System.Threading;
 
 namespace RabbitMQ.publisher
 {
@@ -14,27 +15,25 @@ namespace RabbitMQ.publisher
             using IModel channel = connection.CreateModel();
 
             //channel.QueueDeclare("hello-queue", true, false, false);
-            channel.QueueDeclare(queue: "hello-queue",
-                    durable: true, //Data fiziksel olarak mı yoksa memoryde mi tutulsun
-                    exclusive: false, //Başka connectionlarda bu kuyruğa ulaşabilsin mi
-                    autoDelete: false, //Eğer kuyruktaki son mesaj ulaştığında kuyruğun silinmesini istiyorsak kullanılır.
-                    arguments: null//Exchangelere verilecek olan parametreler tanımlamak için kullanılır.
-                    );
+
+            channel.ExchangeDeclare("logs-fanout", durable: true, type: ExchangeType.Fanout);
+
             Enumerable.Range(1, 50).ToList().ForEach(x =>
             {
-                string message = $"Message {x}";
+                string message = $"Log {x}";
                 var messageBody = Encoding.UTF8.GetBytes(message);
                 //channel.BasicPublish(string.Empty, "hello-queue", null, messageBody);
                 //Queue ya atmak için kullanılır.
-                channel.BasicPublish(exchange: "",//mesajın alınıp bir veya birden fazla queue ya konmasını sağlıyor.
-                    routingKey: "hello-queue", //Hangi queue ya atanacak.
+                channel.BasicPublish(exchange: "logs-fanout",//mesajın alınıp bir veya birden fazla queue ya konmasını sağlıyor.
+                    routingKey: "", //Hangi queue ya atanacak.
                     body: messageBody//Mesajun içeriği
                     );
+                Thread.Sleep(1500);
                 Console.WriteLine($"Mesaj Gönderilmiştir : {message}");
 
             });
 
-            
+
 
             Console.ReadLine();
         }
