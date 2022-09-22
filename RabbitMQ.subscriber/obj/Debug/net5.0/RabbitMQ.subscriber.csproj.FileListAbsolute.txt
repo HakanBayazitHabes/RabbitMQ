@@ -15,4 +15,6 @@ C:\Users\user\Desktop\Software\Fatih Çakıroğlu Core\RabbitMQ\RabbitMQ.subscri
 C:\Users\user\Desktop\Software\Fatih Çakıroğlu Core\RabbitMQ\RabbitMQ.subscriber\obj\Debug\net5.0\RabbitMQ.subscriber.pdb
 C:\Users\user\Desktop\Software\Fatih Çakıroğlu Core\RabbitMQ\RabbitMQ.subscriber\obj\Debug\net5.0\RabbitMQ.subscriber.genruntimeconfig.cache
 C:\Users\user\Desktop\Software\Fatih Çakıroğlu Core\RabbitMQ\RabbitMQ.subscriber\obj\Debug\net5.0\RabbitMQ.subscriber.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\Software\Fatih Çakıroğlu Core\RabbitMQ\RabbitMQ.subscriber\bin\Debug\net5.0\Shared.dll
+C:\Users\user\Desktop\Software\Fatih Çakıroğlu Core\RabbitMQ\RabbitMQ.subscriber\bin\Debug\net5.0\Shared.pdb
 C:\Users\user\Desktop\Software\Fatih Çakıroğlu Core\RabbitMQ\RabbitMQ.subscriber\obj\Debug\net5.0\refint\RabbitMQ.subscriber.dll
