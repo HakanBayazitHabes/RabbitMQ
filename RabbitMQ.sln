@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RabbitMQ.subscriber", "Rabb
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RabbittMQWeb.Workmark", "RabbittMQWeb.Workmark\RabbittMQWeb.Workmark.csproj", "{1D804A67-6A52-41CD-A9FC-34592E59ADD6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitMQWeb.ExcelCreate", "RabbitMQWeb.ExcelCreate\RabbitMQWeb.ExcelCreate.csproj", "{84B13D9F-882E-47FF-88F7-B0B688AC3F6C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RabbitMQWeb.ExcelCreate", "RabbitMQWeb.ExcelCreate\RabbitMQWeb.ExcelCreate.csproj", "{84B13D9F-882E-47FF-88F7-B0B688AC3F6C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "shared_", "shared_\shared_.csproj", "{40993984-7661-46B3-AFB1-4F8AEDCF308C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{84B13D9F-882E-47FF-88F7-B0B688AC3F6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{84B13D9F-882E-47FF-88F7-B0B688AC3F6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{84B13D9F-882E-47FF-88F7-B0B688AC3F6C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40993984-7661-46B3-AFB1-4F8AEDCF308C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40993984-7661-46B3-AFB1-4F8AEDCF308C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40993984-7661-46B3-AFB1-4F8AEDCF308C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40993984-7661-46B3-AFB1-4F8AEDCF308C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

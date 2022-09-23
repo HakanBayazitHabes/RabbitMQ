@@ -2094,6 +2094,16 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
+      },
+      "shared_/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/shared_.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/shared_.dll": {}
+        }
       }
     }
   },
@@ -7358,6 +7368,11 @@
         "system.xml.xmlserializer.4.3.0.nupkg.sha512",
         "system.xml.xmlserializer.nuspec"
       ]
+    },
+    "shared_/1.0.0": {
+      "type": "project",
+      "path": "../shared_/shared_.csproj",
+      "msbuildProject": "../shared_/shared_.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -7367,7 +7382,8 @@
       "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.17",
       "Microsoft.EntityFrameworkCore.Tools >= 5.0.17",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 5.0.2",
-      "RabbitMQ.Client >= 6.2.2"
+      "RabbitMQ.Client >= 6.2.2",
+      "shared_ >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -7401,7 +7417,11 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\user\\Desktop\\Software\\Fatih Çakıroğlu Core\\RabbitMQ\\shared_\\shared_.csproj": {
+              "projectPath": "C:\\Users\\user\\Desktop\\Software\\Fatih Çakıroğlu Core\\RabbitMQ\\shared_\\shared_.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

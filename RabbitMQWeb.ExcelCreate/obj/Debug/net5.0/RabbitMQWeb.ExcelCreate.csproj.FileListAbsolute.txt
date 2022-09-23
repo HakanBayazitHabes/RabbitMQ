@@ -152,3 +152,6 @@ C:\Users\user\Desktop\Software\Fatih Çakıroğlu Core\RabbitMQ\RabbitMQWeb.Exce
 C:\Users\user\Desktop\Software\Fatih Çakıroğlu Core\RabbitMQ\RabbitMQWeb.ExcelCreate\obj\Debug\net5.0\RabbitMQWeb.ExcelCreate.csproj.AssemblyReference.cache
 C:\Users\user\Desktop\Software\Fatih Çakıroğlu Core\RabbitMQ\RabbitMQWeb.ExcelCreate\obj\Debug\net5.0\Razor\Views\Account\Login.cshtml.g.cs
 C:\Users\user\Desktop\Software\Fatih Çakıroğlu Core\RabbitMQ\RabbitMQWeb.ExcelCreate\obj\Debug\net5.0\Razor\Views\Products\Index.cshtml.g.cs
+C:\Users\user\Desktop\Software\Fatih Çakıroğlu Core\RabbitMQ\RabbitMQWeb.ExcelCreate\obj\Debug\net5.0\Razor\Views\Products\Files.cshtml.g.cs
+C:\Users\user\Desktop\Software\Fatih Çakıroğlu Core\RabbitMQ\RabbitMQWeb.ExcelCreate\bin\Debug\net5.0\shared_.dll
+C:\Users\user\Desktop\Software\Fatih Çakıroğlu Core\RabbitMQ\RabbitMQWeb.ExcelCreate\bin\Debug\net5.0\shared_.pdb

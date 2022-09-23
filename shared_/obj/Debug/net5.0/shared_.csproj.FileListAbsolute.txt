@@ -1,0 +1,12 @@
+C:\Users\user\Desktop\Software\Fatih Çakıroğlu Core\RabbitMQ\shared_\bin\Debug\net5.0\shared_.deps.json
+C:\Users\user\Desktop\Software\Fatih Çakıroğlu Core\RabbitMQ\shared_\bin\Debug\net5.0\shared_.dll
+C:\Users\user\Desktop\Software\Fatih Çakıroğlu Core\RabbitMQ\shared_\bin\Debug\net5.0\ref\shared_.dll
+C:\Users\user\Desktop\Software\Fatih Çakıroğlu Core\RabbitMQ\shared_\bin\Debug\net5.0\shared_.pdb
+C:\Users\user\Desktop\Software\Fatih Çakıroğlu Core\RabbitMQ\shared_\obj\Debug\net5.0\shared_.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\Software\Fatih Çakıroğlu Core\RabbitMQ\shared_\obj\Debug\net5.0\shared_.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\Desktop\Software\Fatih Çakıroğlu Core\RabbitMQ\shared_\obj\Debug\net5.0\shared_.AssemblyInfoInputs.cache
+C:\Users\user\Desktop\Software\Fatih Çakıroğlu Core\RabbitMQ\shared_\obj\Debug\net5.0\shared_.AssemblyInfo.cs
+C:\Users\user\Desktop\Software\Fatih Çakıroğlu Core\RabbitMQ\shared_\obj\Debug\net5.0\shared_.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\Software\Fatih Çakıroğlu Core\RabbitMQ\shared_\obj\Debug\net5.0\shared_.dll
+C:\Users\user\Desktop\Software\Fatih Çakıroğlu Core\RabbitMQ\shared_\obj\Debug\net5.0\ref\shared_.dll
+C:\Users\user\Desktop\Software\Fatih Çakıroğlu Core\RabbitMQ\shared_\obj\Debug\net5.0\shared_.pdb

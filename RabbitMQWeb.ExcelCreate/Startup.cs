@@ -6,7 +6,9 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using RabbitMQ.Client;
 using RabbitMQWeb.ExcelCreate.Models;
+using RabbitMQWeb.ExcelCreate.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,6 +28,15 @@ namespace RabbitMQWeb.ExcelCreate
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddSingleton(sp => new ConnectionFactory()
+            {
+                HostName = Configuration.GetConnectionString("HostName"),
+                UserName = Configuration.GetConnectionString("UserName"),
+                Password = Configuration.GetConnectionString("Password"),
+                DispatchConsumersAsync = true
+            });
+            services.AddSingleton<RabbitMQPublisher>();
+            services.AddSingleton<RabbitMQClientService>();
             services.AddDbContext<AppDbContext>(options =>
             {
                 options.UseSqlServer(Configuration.GetConnectionString("SqlServer"));
