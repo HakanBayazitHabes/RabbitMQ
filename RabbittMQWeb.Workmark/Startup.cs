@@ -6,6 +6,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using RabbitMQ.Client;
+using RabbittMQWeb.Workmark.BackgroundServices;
 using RabbittMQWeb.Workmark.Models;
 using RabbittMQWeb.Workmark.Services;
 using System;
@@ -31,7 +32,8 @@ namespace RabbittMQWeb.Workmark
             {
                 HostName = Configuration.GetConnectionString("HostName"),
                 UserName = Configuration.GetConnectionString("UserName"),
-                Password = Configuration.GetConnectionString("Password")
+                Password = Configuration.GetConnectionString("Password"),
+                DispatchConsumersAsync = true
             });
 
             services.AddSingleton<RabbitMQClientService>();
@@ -40,6 +42,8 @@ namespace RabbittMQWeb.Workmark
             {
                 options.UseInMemoryDatabase(databaseName: "productDb");
             });
+            services.AddHostedService<ImageWatermarkProcessBackgroundService>();
+
             services.AddControllersWithViews();
         }
 

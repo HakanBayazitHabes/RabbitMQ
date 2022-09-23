@@ -6,6 +6,7 @@ C:\Users\user\Desktop\Software\Fatih Çakıroğlu Core\RabbitMQ\RabbitMQ.subscri
 C:\Users\user\Desktop\Software\Fatih Çakıroğlu Core\RabbitMQ\RabbitMQ.subscriber\bin\Debug\net5.0\ref\RabbitMQ.subscriber.dll
 C:\Users\user\Desktop\Software\Fatih Çakıroğlu Core\RabbitMQ\RabbitMQ.subscriber\bin\Debug\net5.0\RabbitMQ.subscriber.pdb
 C:\Users\user\Desktop\Software\Fatih Çakıroğlu Core\RabbitMQ\RabbitMQ.subscriber\bin\Debug\net5.0\RabbitMQ.Client.dll
+C:\Users\user\Desktop\Software\Fatih Çakıroğlu Core\RabbitMQ\RabbitMQ.subscriber\obj\Debug\net5.0\RabbitMQ.subscriber.csproj.AssemblyReference.cache
 C:\Users\user\Desktop\Software\Fatih Çakıroğlu Core\RabbitMQ\RabbitMQ.subscriber\obj\Debug\net5.0\RabbitMQ.subscriber.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\user\Desktop\Software\Fatih Çakıroğlu Core\RabbitMQ\RabbitMQ.subscriber\obj\Debug\net5.0\RabbitMQ.subscriber.AssemblyInfoInputs.cache
 C:\Users\user\Desktop\Software\Fatih Çakıroğlu Core\RabbitMQ\RabbitMQ.subscriber\obj\Debug\net5.0\RabbitMQ.subscriber.AssemblyInfo.cs
@@ -15,4 +16,3 @@ C:\Users\user\Desktop\Software\Fatih Çakıroğlu Core\RabbitMQ\RabbitMQ.subscri
 C:\Users\user\Desktop\Software\Fatih Çakıroğlu Core\RabbitMQ\RabbitMQ.subscriber\obj\Debug\net5.0\ref\RabbitMQ.subscriber.dll
 C:\Users\user\Desktop\Software\Fatih Çakıroğlu Core\RabbitMQ\RabbitMQ.subscriber\obj\Debug\net5.0\RabbitMQ.subscriber.pdb
 C:\Users\user\Desktop\Software\Fatih Çakıroğlu Core\RabbitMQ\RabbitMQ.subscriber\obj\Debug\net5.0\RabbitMQ.subscriber.genruntimeconfig.cache
-C:\Users\user\Desktop\Software\Fatih Çakıroğlu Core\RabbitMQ\RabbitMQ.subscriber\obj\Debug\net5.0\RabbitMQ.subscriber.csproj.AssemblyReference.cache

@@ -74,7 +74,7 @@
             },
             "RabbitMQ.Client": {
               "target": "Package",
-              "version": "[6.4.0, )"
+              "version": "[6.2.2, )"
             },
             "System.Drawing.Common": {
               "target": "Package",

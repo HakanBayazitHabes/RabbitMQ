@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "8bsW8M+IJIfZo3McEqau/WW//tacJWWOTVDYohjoxmv2alOVxBxsBwn7iS2WirWn9qrZKwQcVCkBcjRqkarpjA==",
+  "dgSpecHash": "YBKKnNIsKVarl5JpO/MIYa5jX1mIvYcdSN5DwJkowCt4cPFyeiFUfuXUL/Q0PHwWt8FMiBvqn0CYBdBetiktzQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\user\\Desktop\\Software\\Fatih Çakıroğlu Core\\RabbitMQ\\RabbittMQWeb.Workmark\\RabbittMQWeb.Workmark.csproj",
   "expectedPackageFiles": [
@@ -55,7 +55,7 @@
     "C:\\Users\\user\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\microsoft.win32.systemevents\\5.0.0\\microsoft.win32.systemevents.5.0.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\newtonsoft.json\\11.0.2\\newtonsoft.json.11.0.2.nupkg.sha512",
-    "C:\\Users\\user\\.nuget\\packages\\rabbitmq.client\\6.4.0\\rabbitmq.client.6.4.0.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\rabbitmq.client\\6.2.2\\rabbitmq.client.6.2.2.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\runtime.native.system\\4.3.0\\runtime.native.system.4.3.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\system.collections\\4.3.0\\system.collections.4.3.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\system.collections.concurrent\\4.3.0\\system.collections.concurrent.4.3.0.nupkg.sha512",
